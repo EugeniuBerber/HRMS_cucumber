@@ -13,8 +13,9 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
-	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -51,7 +52,6 @@
 			<version>6.9.1</version>
 			<scope>test</scope>
 		</dependency>
-		
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
