@@ -3,30 +3,81 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-12-10T21:27:01.159Z",
-        "line": 4,
-        "name": "Creating an employee",
+        "line": 3,
+        "name": "",
         "description": "",
-        "id": "syntax-hrms-api-workflow;creating-an-employee",
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 1674491700,
+              "duration": 1270510200,
               "status": "passed"
             },
-            "line": 5,
+            "line": 4,
             "name": "a JWT is generated",
             "match": {
               "location": "API_Steps.GenerateTokenSteps.a_jwt_is_generated()"
             },
             "keyword": "Given "
           }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-11T18:40:24.681Z",
+        "line": 23,
+        "name": "Create dynamic scenario",
+        "description": "",
+        "id": "syntax-hrms-api-workflow;create-dynamic-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 148445600,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "a request is prepared for creating an employee with dynamic data \"Sneguro4ka\" \"Morozovna\" \"Dedovna\" \"F\" \"1955-12-27\" \"Active\" \"Helper\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sneguro4ka\"",
+                  "offset": 65
+                },
+                {
+                  "val": "\"Morozovna\"",
+                  "offset": 78
+                },
+                {
+                  "val": "\"Dedovna\"",
+                  "offset": 90
+                },
+                {
+                  "val": "\"F\"",
+                  "offset": 100
+                },
+                {
+                  "val": "\"1955-12-27\"",
+                  "offset": 104
+                },
+                {
+                  "val": "\"Active\"",
+                  "offset": 117
+                },
+                {
+                  "val": "\"Helper\"",
+                  "offset": 126
+                }
+              ],
+              "location": "API_Steps.API_Workflow_Steps.a_Request_IsPrepared_For_Creating_An_Employee_With_Dynamic_Data(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          }
         ],
         "tags": [
           {
-            "name": "@APIWorkflow"
+            "name": "@DynamicAPI"
           }
         ]
       }
