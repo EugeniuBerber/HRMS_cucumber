@@ -4,7 +4,6 @@ import io.cucumber.java.en.Given;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
@@ -20,12 +19,12 @@ public class GenerateTokenSteps {
                         "  \"password\": \"stringnotstring\"\n" +
                         "}");
         Response generateTokenResponse = generateTokenRequest.when().post("/generateToken.php");
+        System.out.println("--------- RESPONSE FROM DB ---------");
         generateTokenResponse.prettyPrint();
-        System.out.println("------------------------------------------------------------------------------------------------------");
-        generateTokenResponse.prettyPeek();
+        System.out.println("------------------------------------------------------------------------------------------------------\n");
+        //  generateTokenResponse.prettyPeek();
 
         token = "Bearer " + generateTokenResponse.jsonPath().getString("token");
-        System.out.println(token);
+        System.out.println("JWT: " + token);
     }
-
 }
